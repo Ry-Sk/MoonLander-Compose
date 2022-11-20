@@ -1,0 +1,5 @@
+{
+    "loader": "php",
+    "author": "Saiki",
+    "describe": "获取随机的内容"
+}

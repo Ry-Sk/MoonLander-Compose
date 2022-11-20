@@ -1,0 +1,118 @@
+[{
+    "sign": "netease:search",
+    "aliases": ["ns"],
+    "description": "搜索音乐",
+    "help": "/netease:search Music-Name",
+    "usages": [
+        "/netease:search chaos"
+    ],
+    "arguments": [{
+            "name": "name",
+            "require": true,
+            "array": false,
+            "describle": "name",
+            "default": null
+        },
+        {
+            "name": "limit",
+            "require": false,
+            "array": false,
+            "describle": "name",
+            "default": 10
+        }
+    ],
+    "options": []
+}, {
+    "sign": "netease:searchplaylists",
+    "aliases": ["nsp"],
+    "description": "搜索歌单",
+    "help": "/netease:search Music-PlayList-Name",
+    "usages": [
+        "/netease:search Ryuichi-Sakamoto"
+    ],
+    "arguments": [{
+            "name": "name",
+            "require": true,
+            "array": false,
+            "describle": "name",
+            "default": null
+        },
+        {
+            "name": "limit",
+            "require": false,
+            "array": false,
+            "describle": "name",
+            "default": 10
+        }
+    ],
+    "options": []
+}, {
+    "sign": "netease:play",
+    "aliases": ["np"],
+    "description": "点播歌曲",
+    "help": "/netease:play Song-ID Bit-Rate Type Loop-Count",
+    "usages": [
+        "/netease:play 17177324 320 1 10"
+    ],
+    "arguments": [{
+            "name": "id",
+            "require": true,
+            "array": false,
+            "describle": "Song-ID",
+            "default": null
+        },
+        {
+            "name": "bit",
+            "require": false,
+            "array": false,
+            "describle": "Bit-Rate",
+            "default": 9999
+        },
+        {
+            "name": "type",
+            "require": false,
+            "array": false,
+            "describle": "Type",
+            "default": 1
+        },
+        {
+            "name": "loop",
+            "require": false,
+            "array": false,
+            "describle": "Loop-Count",
+            "default": 1
+        }
+    ],
+    "options": []
+}, {
+    "sign": "netease:playlist",
+    "aliases": ["npl"],
+    "description": "点播歌单",
+    "help": "/netease:playlist Songlist-ID",
+    "usages": [
+        "/netease:playlist 79726968"
+    ],
+    "arguments": [{
+            "name": "id",
+            "require": true,
+            "array": false,
+            "describle": "Songlist-ID",
+            "default": null
+        },
+        {
+            "name": "bit",
+            "require": false,
+            "array": false,
+            "describle": "Bit-Rate",
+            "default": 9999
+        },
+        {
+            "name": "type",
+            "require": false,
+            "array": false,
+            "describle": "Type",
+            "default": 0
+        }
+    ],
+    "options": []
+}]
