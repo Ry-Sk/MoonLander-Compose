@@ -57,11 +57,11 @@ class BotFather extends PhpPlugin
                     $event->sender->sendMessage('success');
                     return;
                 } else {
-                    $event->sender->sendMessage("密码错误");
+                    $event->sender->sendMessage("Password error");
                     return;
                 }
             }
-            $event->sender->sendMessage("无法连接API");
+            $event->sender->sendMessage("Unable to connect to API");
         }
         if($event->sign=='botFather:signout'){
             $username=$event->input->getArgument('username');
@@ -104,21 +104,29 @@ class BotFather extends PhpPlugin
                     $event->sender->sendMessage('success');
                     return;
                 } else {
-                    $event->sender->sendMessage("密码错误");
+                    $event->sender->sendMessage("Password error");
                     return;
                 }
             }
-            $event->sender->sendMessage("无法连接API");
+            $event->sender->sendMessage("Unable to connect to API");
         }
         if(substr($event->sign,0,10)=='botFather:'){
             if($event->sender->getUserId()!=$this->config['master']){
-                $event->sender->sendMessage('呜呜呜，你不是我的主人');
+                $event->sender->sendMessage('Oooooooooo, you are not my master');
                 return;
             }
         }
-
+        if($event->sign=='botFather:room'){
+            $roomid = explode('_]',explode('[_',strtolower($event->input->getArgument('roomid')))[1])[0];
+            if(strlen($roomid) == 13) {
+                $event->sender->sendMessage('The transmission order has been received!！','A5A051');
+                sleep(5);
+                Bot::$instance->setRoom($roomid);
+            } else $event->sender->sendMessage('Format Err','A5A051');
+            return;
+        }
         if($event->sign=='botFather:here'){
-            $event->sender->sendMessage('bye');
+            $event->sender->sendMessage('The transmission order has been received!','A5A051');
             Bot::$instance->setRoom(IIROSEProvider::$instance->getUserInfo($event->sender->getUsername())->room_id);
             return;
         }
@@ -128,14 +136,14 @@ class BotFather extends PhpPlugin
             /** @var BotPlugin botPlugin */
             $botPlugin=BotPlugin::where('bot_id',$this->bot->id)->where('slug',$pluginName)->first();
             if($botPlugin){
-                $event->sender->sendMessage('插件已经在运行了');
+                $event->sender->sendMessage('The plugin is already running');
             }else{
                 $botPlugin=new BotPlugin();
                 $botPlugin->bot_id=$this->bot->id;
                 $botPlugin->slug=$pluginName;
                 $botPlugin->configure=json_encode($plugin->getDefaultConfig());
                 $botPlugin->save();
-                $event->sender->sendMessage('完工啦');
+                $event->sender->sendMessage('It\'s done!');
             }
         }
         if($event->sign=='botFather:disablePlugin'){
@@ -145,9 +153,9 @@ class BotFather extends PhpPlugin
             $botPlugin=BotPlugin::where('bot_id',$this->bot->id)->where('slug',$pluginName)->first();
             if($botPlugin){
                 $botPlugin->delete();
-                $event->sender->sendMessage('插件已禁用');
+                $event->sender->sendMessage('Plugin is disabled');
             }else{
-                $event->sender->sendMessage('未发现启用的插件');
+                $event->sender->sendMessage('No enabled plugins found');
             }
         }
         if($event->sign=='botFather:listPlugin'){

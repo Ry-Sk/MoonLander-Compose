@@ -49,7 +49,7 @@ class Count extends PhpPlugin
         $pluginCount->saveOrFail();
     }
 
-    private function count($user_id)
+    private function count($user_id,$username)
     {
         /** @var PluginCount $pluginCount */
         $pluginCount=PluginCount
@@ -59,12 +59,7 @@ class Count extends PhpPlugin
         if (!Date::today()->isSamedAY($pluginCount->last)) {
             $pluginCount->count=0;
         }
-        return '发言统计
--------------------
-用户： '.$user_id.' 
-机器人： '.$this->bot->username.'
-时间：'.date('Y-m-d').'
-发言数：'.$pluginCount->count;
+        return '**'.$username.'** : 您在'.date('m').'月'.date('d').'日，共发言 **'.$pluginCount->count.'** 句';
     }
     private function room()
     {
@@ -76,19 +71,14 @@ class Count extends PhpPlugin
             ::where('bot_id', '=', $this->bot->id)
             ->where('last', '=', Date::today())
             ->count();
-        return '机器人统计
-----------------
-机器人： [*'.$this->bot->username.'*] 
-时间：'.date('Y-m-d').'
-发言数：'.$chatCount.'
-发言人数：'.$userCount;
+            return '**'.$this->bot->username.'** : 截止至'.date('m').'月'.date('d').'日，咱一共见了 **'.$userCount.'** 人，话痨们聊了 **'.$chatCount.'** 句';
     }
     public function onCommand(CommandEvent $event)
     {
         if ($event->sign=='count:bot') {
             $event->output->write($this->room());
         } elseif ($event->sign=='count:user') {
-            $event->output->write($this->count($event->sender->getUserId()));
+            $event->output->write($this->count($event->sender->getUserId(),$event->sender->getUsername()));
         }
     }
 }

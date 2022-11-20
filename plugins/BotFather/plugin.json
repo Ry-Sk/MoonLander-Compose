@@ -1,5 +1,5 @@
 {
-  "loader": "php",
-  "author": "hs_err",
-  "describe": "bot管理插件"
+    "loader": "php",
+    "author": "hs_err",
+    "describe": "bot管理插件"
 }

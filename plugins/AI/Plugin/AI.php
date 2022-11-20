@@ -15,6 +15,9 @@ class AI extends PhpPlugin
         if (substr_count($event->getMessage(), $this->bot->username)) {
             try {
                 $message = $event->message;
+                if(strpos($message, '早安') !== false || strpos($message, '午安') !== false || strpos($message, '晚安') !== false ){
+                    return;
+                }
                 $message = str_replace(' [*'.$this->bot->username.'*] ', '菲菲', $message);
                 $message = str_replace(' ', '', $message);
                 $client = new Client();
@@ -31,7 +34,7 @@ class AI extends PhpPlugin
                 $return = str_replace('菲菲', $this->bot->username, $return);
                 $event->getSender()->sendMessage($return);
             } catch (\Exception $e) {
-                $event->getSender()->sendMessage('喵呜~喵喵cpu坏啦~喂......不要帮我修啦');
+                $event->sender->sendRawMessage('\\\\\( **警告：** 出现了一些未知错误，但请不要修复我！','B54434');
                 ErrorFormat::dump($e);
             }
         }
