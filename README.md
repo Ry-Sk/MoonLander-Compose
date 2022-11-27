@@ -39,7 +39,7 @@ sudo apt update
 
 #### 💻 环境安装
 ```bash
-sudo apt install mediainfo php8.1-cli php8.1-dev php8.1-mysql php8.1-sqlite3 php8.1-curl php8.1-json php8.1-fileinfo php8.1-bcmath php8.1-xml
+sudo apt install mediainfo php8.1-cli php8.1-dev php8.1-mysql php8.1-sqlite3 php8.1-curl php8.1-fileinfo php8.1-bcmath php8.1-xml
 ```
 
 #### 💻 编译 / 安装 `Swoole` 扩展
