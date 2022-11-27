@@ -11,10 +11,11 @@ class GotoResolver implements Resolver
 {
     public function isPacket($message, $firstChar, $count, $explode)
     {
-        if ($firstChar == '"' && $count == 12
-            && substr($explode[3], 0, 1) == '\''
-            && $explode[3] != '\'1'
-            && $explode[3] != '\'3') {
+        if (/* $firstChar == '"' &&  */$count == 12
+            && substr($explode[3],0,2)=='\'2'
+            && $explode[0]>Bot::$instance->startAt
+            && $explode[2]!=Bot::$instance->username) 
+        {
             return true;
         }
     }

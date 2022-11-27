@@ -39,7 +39,7 @@ class Connection
                         'cp' => microtime() . '1090',
                         'mu' => '01',
                         'nt' => '!6',
-                        'rp' => '1234567890',
+                        'rp' => '',
                         'mb' => '',
                         'fp' => '@' . md5($this->username)
                     ]
