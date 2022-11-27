@@ -60,12 +60,6 @@ sudo ln -s /etc/php/8.1/mods-available/swoole.ini /etc/php/8.1/cli/conf.d/20-swo
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer 
 ```
 
-### ⚓ 使用 `Docker`
-
-```bash
-Todo...
-```
-
 ### 🌙 MoonLander
 
 ```bash
