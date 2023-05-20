@@ -1,1 +1,0 @@
-<?php echo e('pppppp'); ?><?php /**PATH /home/logos/projects/iirose-bot/views/test.blade.php ENDPATH**/ ?>

@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+
+  moonlander:
+    image: 54ik1/moonlander-compose:latest
+    container_name: Moonlander
+    ports:
+      - 8008:8008
+    volumes:
+      - ./plugins:/app/plugins
+      - ./storge:/app/storge
+      - ./masterConfig:/app/masterConfig
+    restart: unless-stopped
