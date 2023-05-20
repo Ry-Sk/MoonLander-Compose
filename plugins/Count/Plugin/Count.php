@@ -13,7 +13,7 @@ use Plugin\Count\Models\PluginCount;
 
 class Count extends PhpPlugin
 {
-    public function __construct($bot, $config, $pluginLoader)
+    /* public function __construct($bot, $config, $pluginLoader)
     {
         parent::__construct($bot, $config, $pluginLoader);
         if (!DataBase::schema()->hasTable('plugin_counts')) {
@@ -25,7 +25,7 @@ class Count extends PhpPlugin
                 $table->date('last');
             });
         }
-    }
+    } */
 
     public function onChat(ChatEvent $event)
     {

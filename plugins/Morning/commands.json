@@ -1,0 +1,27 @@
+[
+  {
+    "sign": "morning:zao",
+    "aliases":["zao"],
+    "description": "早安早安！",
+    "help": "/morning:zao",
+    "usages": [
+      "/morning:zao"
+    ],
+    "arguments": [
+    ],
+    "options": [
+    ]
+  },{
+    "sign": "morning:rank",
+    "aliases":["rank"],
+    "description": "排行",
+    "help": "/morning:rank",
+    "usages": [
+      "/morning:rank"
+    ],
+    "arguments": [
+    ],
+    "options": [
+    ]
+  }
+]

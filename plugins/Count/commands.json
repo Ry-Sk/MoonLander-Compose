@@ -1,23 +1,28 @@
-[{
-        "sign": "count:user",
-        "aliases": ["cu"],
-        "description": "今天你说了多少句话",
-        "help": "/count:user",
-        "usages": [
-            "/count:user"
-        ],
-        "arguments": [],
-        "options": []
-    },
-    {
-        "sign": "count:bot",
-        "aliases": ["cb"],
-        "description": "今天机器人见了多少人",
-        "help": "/count:bot",
-        "usages": [
-            "/count:bot"
-        ],
-        "arguments": [],
-        "options": []
-    }
+[
+  {
+    "sign": "count:user",
+    "aliases":["cu"],
+    "description": "今天你说了多少句话",
+    "help": "/count:user",
+    "usages": [
+      "/count:user"
+    ],
+    "arguments": [
+    ],
+    "options": [
+    ]
+  },
+  {
+    "sign": "count:bot",
+    "aliases":["cb"],
+    "description": "今天机器人见了多少人",
+    "help": "/count:bot",
+    "usages": [
+      "/count:bot"
+    ],
+    "arguments": [
+    ],
+    "options": [
+    ]
+  }
 ]

@@ -1,15 +1,225 @@
 [
   {
-    "sign": "bot:cut",
-    "aliases":["cut"],
-    "description": "切掉机器人点播的内容",
-    "help": "/bot:cut",
+    "sign": "Bot:Low:Cut",
+    "aliases": [
+      "cut"
+    ],
+    "description": "Cut the content",
+    "help": "Exec Bot:Low:Cut Once/All RoomID",
     "usages": [
-      "/bot:cut"
+      "Exec Bot:Low:Cut All  [_6183a76bb4a95_] "
     ],
     "arguments": [
+      {
+        "name": "type",
+        "require": false,
+        "array": false,
+        "describle": "Once or All",
+        "default": "Once"
+      },
+      {
+        "name": "roomid",
+        "require": false,
+        "array": false,
+        "describle": "IIROSE RoomID",
+        "default": null
+      }
     ],
-    "options": [
-    ]
+    "options": []
+  },{
+    "sign": "Bot:Low:Search",
+    "aliases": [
+      "us"
+    ],
+    "description": "Search the user content",
+    "help": "Exec Bot:Low:Search UserName",
+    "usages": [
+      "Exec Bot:Low:Search  [*Ruby*] "
+    ],
+    "arguments": [
+      {
+        "name": "username",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE UserName",
+        "default": null
+      },
+      {
+        "name": "roomid",
+        "require": false,
+        "array": false,
+        "describle": "IIROSE RoomID",
+        "default": null
+      }
+    ],
+    "options": []
+  },
+  {
+    "sign": "Bot:High:Ban",
+    "aliases": [
+      "ban"
+    ],
+    "description": "Ban the user",
+    "help": "Exec Bot:High:Ban Username Time Reason",
+    "usages": [
+      "Exec Bot:High:Ban  [*Ruby*]  1h \"Slip of the hand\""
+    ],
+    "arguments": [
+      {
+        "name": "username",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE UserName",
+        "default": null
+      },
+      {
+        "name": "time",
+        "require": false,
+        "array": false,
+        "describle": "Ban Time",
+        "default": "&"
+      },
+      {
+        "name": "reason",
+        "require": false,
+        "array": false,
+        "describle": "Ban Reason",
+        "default": "You are banned by the bot."
+      }
+    ],
+    "options": []
+  },
+  {
+    "sign": "Bot:High:DarkRoom",
+    "aliases": [
+      "darkroom"
+    ],
+    "description": "Move user to DarkRoom",
+    "help": "Exec Bot:High:DarkRoom Username Time Reason",
+    "usages": [
+      "Exec Bot:High:DarkRoom  [*Ruby*]  1h \"Slip of the hand\""
+    ],
+    "arguments": [
+      {
+        "name": "username",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE UserName",
+        "default": null
+      },
+      {
+        "name": "time",
+        "require": false,
+        "array": false,
+        "describle": "Ban Time",
+        "default": "&"
+      },
+      {
+        "name": "reason",
+        "require": false,
+        "array": false,
+        "describle": "Ban Reason",
+        "default": "You are banned by the bot."
+      }
+    ],
+    "options": []
+  },
+  {
+    "sign": "Bot:High:Mute",
+    "aliases": [
+      "mute"
+    ],
+    "description": "Mute and unplay user",
+    "help": "Exec Bot:High:Mute Username Time Reason",
+    "usages": [
+      "Exec Bot:High:Mute  [*Ruby*]  1h \"Slip of the hand\""
+    ],
+    "arguments": [
+      {
+        "name": "username",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE UserName",
+        "default": null
+      },
+      {
+        "name": "time",
+        "require": false,
+        "array": false,
+        "describle": "Ban Time",
+        "default": "&"
+      },
+      {
+        "name": "reason",
+        "require": false,
+        "array": false,
+        "describle": "Ban Reason",
+        "default": "You are banned by the bot."
+      },
+      {
+        "name": "type",
+        "require": false,
+        "array": false,
+        "describle": "Mute or Unplay",
+        "default": 3
+      }
+    ],
+    "options": []
+  },
+  {
+    "sign": "Bot:High:Move",
+    "aliases": [
+      "move"
+    ],
+    "description": "Move user to other room",
+    "help": "Exec Bot:High:Move Username RoomID",
+    "usages": [
+      "Exec Bot:High:Mute  [*Ruby*]   [_6183a76bb4a95_] "
+    ],
+    "arguments": [
+      {
+        "name": "username",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE UserName",
+        "default": null
+      },
+      {
+        "name": "roomid",
+        "require": true,
+        "array": false,
+        "describle": "IIROSE RoomID",
+        "default": null
+      }
+    ],
+    "options": []
+  },
+  {
+    "sign": "Bot:High:Notice",
+    "aliases": [
+      "notice"
+    ],
+    "description": "Notice the room",
+    "help": "Exec Bot:High:Notice Notice RoomID",
+    "usages": [
+      "Exec Bot:High:Notice \"Slip of the hand\"  [_6183a76bb4a95_] "
+    ],
+    "arguments": [
+      {
+        "name": "msg",
+        "require": true,
+        "array": false,
+        "describle": "Notice Massage",
+        "default": null
+      },
+      {
+        "name": "roomid",
+        "require": false,
+        "array": false,
+        "describle": "IIROSE RoomID",
+        "default": null
+      }
+    ],
+    "options": []
   }
 ]

@@ -1,0 +1,43 @@
+[
+    {
+        "sign": "Welcome:Toogle",
+        "aliases": [
+            "wt"
+        ],
+        "description": "Toogle",
+        "help": "/Welcome:Toogle",
+        "usages": [
+            "/Welcome:Toogle"
+        ],
+        "arguments": [],
+        "options": []
+    },
+    {
+        "sign": "Welcome:Add",
+        "aliases": [
+            "wa"
+        ],
+        "description": "Add",
+        "help": "/Welcome:Add",
+        "usages": [
+            "/Welcome:Add"
+        ],
+        "arguments": [
+            {
+                "name": "userid",
+                "require": false,
+                "array": false,
+                "describle": "IIROSE UserID",
+                "default": null
+            },
+            {
+                "name": "msg",
+                "require": false,
+                "array": false,
+                "describle": "Welcome Message",
+                "default": null
+            }
+        ],
+        "options": []
+    }
+]

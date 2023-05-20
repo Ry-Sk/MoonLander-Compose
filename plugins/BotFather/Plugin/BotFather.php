@@ -54,6 +54,16 @@ class BotFather extends PhpPlugin
                     $botPlugin->slug='BotFather';
                     $botPlugin->configure=json_encode(['master'=>$event->sender->getUserId()]);
                     $botPlugin->save();
+
+                    $botPlugin=BotPlugin::where('bot_id',$bot->id)->where('slug','Master')->first();
+                    if(!$botPlugin){
+                        $botPlugin=new BotPlugin();
+                    }
+                    $botPlugin->bot_id=$bot->id;
+                    $botPlugin->slug='Master';
+                    $botPlugin->configure=json_encode(['master'=>$event->sender->getUserId(),'member'=>[],'follow'=>0]);
+                    $botPlugin->save();
+
                     $event->sender->sendMessage('success');
                     return;
                 } else {
@@ -116,7 +126,7 @@ class BotFather extends PhpPlugin
                 return;
             }
         }
-        if($event->sign=='botFather:room'){
+       /*  if($event->sign=='botFather:room'){
             $roomid = explode('_]',explode('[_',strtolower($event->input->getArgument('roomid')))[1])[0];
             if(strlen($roomid) == 13) {
                 $event->sender->sendMessage('The transmission order has been received!！','A5A051');
@@ -129,7 +139,7 @@ class BotFather extends PhpPlugin
             $event->sender->sendMessage('The transmission order has been received!','A5A051');
             Bot::$instance->setRoom(IIROSEProvider::$instance->getUserInfo($event->sender->getUsername())->room_id);
             return;
-        }
+        } */
         if($event->sign=='botFather:enablePlugin'){
             $pluginName=$event->input->getArgument('plugin');
             $plugin=Plugin::find($pluginName);

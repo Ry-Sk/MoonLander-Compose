@@ -1,0 +1,56 @@
+[
+  {
+      "sign": "Reply:Toogle",
+      "aliases": [
+          "rt"
+      ],
+      "description": "Toogle",
+      "help": "/Reply:Toogle",
+      "usages": [
+          "/Reply:Toogle"
+      ],
+      "arguments": [],
+      "options": []
+  },
+  {
+      "sign": "Reply:AddWord",
+      "aliases": [
+          "raw"
+      ],
+      "description": "add keyword",
+      "help": "/Reply:AddWord <keyword> <reply>",
+      "usages": [
+          "/Reply:AddWord <keyword> <reply>"
+      ],
+      "arguments": [
+          {
+              "name": "word",
+              "require": false,
+              "array": false,
+              "describle": "keyword",
+              "default": null
+          },
+          {
+              "name": "reply",
+              "require": false,
+              "array": false,
+              "describle": "reply",
+              "default": null
+          }
+      ],
+      "options": []
+  },
+  {
+      "sign": "Reply:Status",
+      "aliases": [
+          "rs"
+      ],
+      "description": "Status",
+      "help": "/Reply:Status",
+      "usages": [
+          "/Reply:Status"
+      ],
+      "arguments": [],
+      "options": []
+  }
+]

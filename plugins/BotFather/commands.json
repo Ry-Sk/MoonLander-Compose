@@ -1,34 +1,4 @@
-[{
-        "sign": "botFather:here",
-        "aliases": [
-            "bh"
-        ],
-        "description": "Come here",
-        "help": "/bh",
-        "usages": [
-            "/bh"
-        ],
-        "arguments": [],
-        "options": []
-    }, {
-        "sign": "botFather:room",
-        "aliases": [
-            "br"
-        ],
-        "description": "Go there!",
-        "help": "/br Room-ID (not verified: critical)",
-        "usages": [
-            "/br 5e384afb72737"
-        ],
-        "arguments": [{
-            "name": "roomid",
-            "require": true,
-            "array": false,
-            "describle": "Room ID",
-            "default": null
-        }],
-        "options": []
-    },
+[
     {
         "sign": "botFather:enablePlugin",
         "aliases": [

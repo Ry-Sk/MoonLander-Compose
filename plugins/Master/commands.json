@@ -1,0 +1,71 @@
+[{
+        "sign": "Master:addMember",
+        "aliases": [
+            "ma"
+        ],
+        "description": "Add Member~",
+        "help": "/ma",
+        "usages": [
+            "/ma"
+        ],
+        "arguments": [{
+            "name": "uid",
+            "require": true,
+            "array": false,
+            "describle": "User ID",
+            "default": null
+        }],
+        "options": []
+    },{
+        "sign": "Master:follow",
+        "aliases": [
+            "mf"
+        ],
+        "description": "follow me~",
+        "help": "/mf",
+        "usages": [
+            "/mf"
+        ],
+        "arguments": [],
+        "options": []
+    },{
+        "sign": "Master:here",
+        "aliases": [
+            "mh"
+        ],
+        "description": "come here~",
+        "help": "/mh",
+        "usages": [
+            "/mh"
+        ],
+        "arguments": [],
+        "options": []
+    },{
+        "sign": "Master:roomPwd",
+        "aliases": [
+            "mrp"
+        ],
+        "description": "save room password~",
+        "help": "/mrp roomId password",
+        "usages": [
+            "/mrp  [_6183a76bb4a95_]  123456"
+        ],
+        "arguments": [
+            {
+                "name": "rid",
+                "require": false,
+                "array": false,
+                "describle": "Room ID",
+                "default": null
+            },
+            {
+                "name": "pwd",
+                "require": false,
+                "array": false,
+                "describle": "Room Password",
+                "default": null
+            }
+        ],
+        "options": []
+    }
+]
