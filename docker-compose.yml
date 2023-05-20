@@ -9,5 +9,5 @@ services:
     volumes:
       - ./plugins:/app/plugins
       - ./storge:/app/storge
-      - ./masterConfig:/app/masterConfig
+      - ./conf.d:/app/conf.d
     restart: unless-stopped
